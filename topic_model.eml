@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.7" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="commons-codec.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../topic_model/libs/commons-codec.jar!/"/>
+	</lib>
+	<lib name="commons-httpclient-3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../topic_model/libs/commons-httpclient-3.1.jar!/"/>
+	</lib>
+	<lib name="commons-logging-1.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../topic_model/libs/commons-logging-1.1.jar!/"/>
+	</lib>
+	<lib name="commons-lang3-3.3.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../topic_model/libs/commons-lang3-3.3.2.jar!/"/>
+	</lib>
+	<lib name="org.json.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../topic_model/libs/org.json.jar!/"/>
+	</lib>
+	<lib name="tree_split-1.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../topic_model/libs/tree_split-1.4.jar!/"/>
+	</lib>
+	<lib name="ansj_seg-2.0.6.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../topic_model/libs/ansj_seg-2.0.6.jar!/"/>
+	</lib>
+	<levels>
+		<level name="jsoup-1.7.3" value="project"/>
+		<level name="libsvm" value="project"/>
+	</levels>
+</component>
