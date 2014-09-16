@@ -3,7 +3,6 @@ package topic_model;
 import Utils.*;
 import org.ansj.domain.Term;
 import org.ansj.splitWord.analysis.NlpAnalysis;
-import org.apache.commons.httpclient.methods.GetMethod;
 
 import java.io.*;
 import java.util.List;

@@ -34,7 +34,7 @@ public class IDFCaculator {
         this.IDFtree = loadIDFtree(filepath);
     }
 
-    public static void loadContent() {
+    public static void loadContent2IDF() {
         TrieTree DFtree = new TrieTree();//用于存储所有的词语的DF值
         String filepath = "D:\\CS\\Java\\DataMining\\微博消息数据集（197810条）\\617821\\weibodata";
         File fileroot = new File(filepath);

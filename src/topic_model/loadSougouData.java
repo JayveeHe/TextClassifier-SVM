@@ -5,11 +5,6 @@ import Utils.TrieTree;
 import Utils.WordNode;
 import org.ansj.domain.Term;
 import org.ansj.splitWord.analysis.NlpAnalysis;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.parser.Parser;
-import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.io.FileOutputStream;

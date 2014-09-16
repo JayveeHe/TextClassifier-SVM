@@ -72,14 +72,14 @@ public class testSVM {
 //        String tet = FileUtils.File2str("./data/sample.txt", "utf-8");
 //        double type = svm.svm_predict(sm, testPredic(tet));
         testPredic(text);
-        String[] preArgs = {"D:\\CS\\Java\\DataMining\\topic_model\\data\\testPreData.txt",
-                "D:\\CS\\Java\\DataMining\\topic_model\\data\\sougouC_TF-IDF_VecData_v200_Scaled_model.txt",
-                "D:\\CS\\Java\\DataMining\\topic_model\\data\\testPreResult.txt"};
+        String[] preArgs = {"./data/testPreData.txt",
+                "./data/sougouC_TF-IDF_VecData_v200_Scaled_model.txt",
+                "./data/testPreResult.txt"};
         svm_predict sp = new svm_predict();
         sp.main(preArgs);
         //输出分类结果
 //        System.out.println(type);
-        String result = FileUtils.File2str("D:\\CS\\Java\\DataMining\\topic_model\\data\\testPreResult.txt", "utf-8");
+        String result = FileUtils.File2str("./data/testPreResult.txt", "utf-8");
         int typeID = (int) (Double.valueOf(result) / 1);
         System.out.println(typeID);
         String type = "";
@@ -122,11 +122,11 @@ public class testSVM {
     }
 
     public static svm_node[] testPredic(String text) throws IOException, InterruptedException {
-        IDFCaculator idfCaculator = new IDFCaculator("D:\\CS\\Java\\DataMining\\topic_model\\data\\IDF值.txt");
+        IDFCaculator idfCaculator = new IDFCaculator("./data/IDF值.txt");
         TrieTree resultTree = new TrieTree();
-        FileOutputStream fos = new FileOutputStream(new File("D:\\CS\\Java\\DataMining\\topic_model\\data\\testData.txt"));
+        FileOutputStream fos = new FileOutputStream(new File("./data/testData.txt"));
         resultTree = idfCaculator.CalTFIDF2Tree(text);
-        TrieTree metaVecTree = getMetaVec("D:\\CS\\Java\\DataMining\\topic_model\\data\\sougouTF-IDF分类排行.txt");
+        TrieTree metaVecTree = getMetaVec("./data/sougouTF-IDF分类排行.txt");
         int index = 1;
         svm_node node = new svm_node();
         String resultLine = "0";
@@ -146,7 +146,7 @@ public class testSVM {
         }
         fos.write((resultLine + "\n").getBytes("GBK"));
         //将测试的原始数据与训练集的原始数据合并，并进行缩放
-        String trainingData = FileUtils.File2str("D:\\CS\\Java\\DataMining\\topic_model\\data\\sougouC_TF-IDF_VecData_v200_Reduced.txt", "utf-8");
+        String trainingData = FileUtils.File2str("./data/sougouC_TF-IDF_VecData_v200_Reduced.txt", "utf-8");
         fos.write(trainingData.getBytes("GBK"));
         fos.close();
 
@@ -154,9 +154,9 @@ public class testSVM {
 //        String[] scaleArgs = {"-r","D:\\CS\\Java\\DataMining\\topic_model\\data\\sougouC_TF-IDF_VecData_v200_range.txt",
 //                "D:\\CS\\Java\\DataMining\\topic_model\\data\\testData.txt"};
         //调用cmd命令，使用svm_scale.exe进行数据缩放
-        String cmdStr = "cmd /c D:\\CS\\Java\\支持库\\libsvm-master\\libsvm-master\\windows\\svm-scale.exe -l 0 -u 1" +
-                " D:\\CS\\Java\\DataMining\\topic_model\\data\\testData.txt" +
-                ">D:\\CS\\Java\\DataMining\\topic_model\\data\\testPreData.txt";
+        String cmdStr = "cmd /c D:\\CS\\Java\\支持库\\libsvm-3.18\\libsvm-3.18\\windows\\svm-scale.exe -l 0 -u 1" +
+                " D:\\CS\\Git\\topic_model\\data\\testData.txt" +
+                ">D:\\CS\\Git\\topic_model\\data\\testPreData.txt";
         Process p = Runtime.getRuntime().exec(cmdStr);
         //挂起等待进程执行结束
         p.waitFor();
@@ -164,8 +164,8 @@ public class testSVM {
         p.destroy();
 //        Runtime.getRuntime().exit(0);
         //将缩放后的结果第一行（待测试数据）提取出来
-        String data = (FileUtils.File2str("D:\\CS\\Java\\DataMining\\topic_model\\data\\testPreData.txt", "GBK").split(NEWLINE))[0];
-        FileOutputStream foss = new FileOutputStream(new File("D:\\CS\\Java\\DataMining\\topic_model\\data\\testPreData.txt"));
+        String data = (FileUtils.File2str("./data/testPreData.txt", "GBK").split(NEWLINE))[0];
+        FileOutputStream foss = new FileOutputStream(new File("./data/testPreData.txt"));
         foss.write((data).getBytes("GBK"));
         return new svm_node[]{node};
     }

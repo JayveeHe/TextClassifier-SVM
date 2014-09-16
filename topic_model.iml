@@ -8,6 +8,13 @@
     <libelement value="jar://$MODULE_DIR$/libs/org.json.jar!/" />
     <libelement value="jar://$MODULE_DIR$/libs/tree_split-1.4.jar!/" />
     <libelement value="jar://$MODULE_DIR$/libs/ansj_seg-2.0.6.jar!/" />
+    <libelement value="file://libs/commons-codec.jar" />
+    <libelement value="file://libs/commons-httpclient-3.1.jar" />
+    <libelement value="file://libs/commons-logging-1.1.jar" />
+    <libelement value="file://libs/commons-lang3-3.3.2.jar" />
+    <libelement value="file://libs/org.json.jar" />
+    <libelement value="file://libs/tree_split-1.4.jar" />
+    <libelement value="file://libs/ansj_seg-2.0.6.jar" />
     <src_description expected_position="0">
       <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
     </src_description>
@@ -20,11 +27,11 @@
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
       <library name="commons-codec.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/commons-codec.jar!/" />
+          <root url="file://libs/commons-codec.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -33,7 +40,7 @@
     <orderEntry type="module-library">
       <library name="commons-httpclient-3.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/commons-httpclient-3.1.jar!/" />
+          <root url="file://libs/commons-httpclient-3.1.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -42,7 +49,7 @@
     <orderEntry type="module-library">
       <library name="commons-logging-1.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/commons-logging-1.1.jar!/" />
+          <root url="file://libs/commons-logging-1.1.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -51,7 +58,7 @@
     <orderEntry type="module-library">
       <library name="commons-lang3-3.3.2.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/commons-lang3-3.3.2.jar!/" />
+          <root url="file://libs/commons-lang3-3.3.2.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -60,7 +67,7 @@
     <orderEntry type="module-library">
       <library name="org.json.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/org.json.jar!/" />
+          <root url="file://libs/org.json.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -69,7 +76,7 @@
     <orderEntry type="module-library">
       <library name="tree_split-1.4.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/tree_split-1.4.jar!/" />
+          <root url="file://libs/tree_split-1.4.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -87,18 +94,21 @@
     <orderEntry type="module-library">
       <library name="ansj_seg-2.0.6.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/ansj_seg-2.0.6.jar!/" />
+          <root url="file://libs/ansj_seg-2.0.6.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="nlp-lang" />
     <orderEntry type="library" name="jsoup-1.7.3" level="project" />
-    <orderEntry type="library" name="jsoup-1.7.3" level="project" />
-    <orderEntry type="library" name="nlp-lang-0.2" level="project" />
-    <orderEntry type="library" name="guava-14.0.1" level="project" />
-    <orderEntry type="library" name="ans_seg-20130401" level="project" />
     <orderEntry type="library" name="libsvm" level="project" />
+    <orderEntry type="library" name="libsvm" level="project" />
+    <orderEntry type="library" name="nlp-lang-0.3" level="project" />
+    <orderEntry type="library" name="ansj_seg-2.0.7" level="project" />
+    <orderEntry type="library" name="org.json" level="project" />
+    <orderEntry type="library" name="jsoup-1.7.3" level="project" />
+    <orderEntry type="library" name="TaobaoCrawler" level="project" />
   </component>
 </module>
 
