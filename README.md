@@ -9,3 +9,6 @@
 - 使用[@ansjsun](https://github.com/ansjsun) 的[ansj_seg](https://github.com/ansjsun/ansj_seg)进行NLP分词，同时需要他的nlp-lang-0.2.jar工具包
 - 依赖[Libsvm](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) Java版
 - org.json工具包（已包含在工程中）
+
+###4、注意事项
+- 需修改testSVM中的各种文件路径，最主要的是cmdStr，改为自己的libsvm路径
